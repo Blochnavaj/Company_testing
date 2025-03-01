@@ -8,11 +8,11 @@ function BestSeller() {
   const [bestSeller, setBestSeller] = useState([]);
 
   useEffect(() => {
-    console.log("Products Data in BestSeller Component:", products);
+     
 
     // Log products to debug
     products.forEach((product) => {
-      console.log(`Product Name: ${product.name}, bestSeller: ${product.bestSeller}`);
+       
     });
 
     // ✅ Properly filter best seller products
@@ -20,7 +20,7 @@ function BestSeller() {
       (product) => Boolean(product.bestSeller) === true
     );
 
-    console.log("Filtered Best Seller Products:", bestSellerProducts);
+ 
 
     // ✅ Show only top 5 products
     setBestSeller(bestSellerProducts.slice(0, 5));

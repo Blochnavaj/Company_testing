@@ -36,7 +36,7 @@ function LIst() {
     }
 
     try {
-      console.log("Deleting product with ID:", id);
+       
 
       const response = await axios.delete(`${backendUrl}/api/v1/remove/${id}`, {
         headers: { Authorization: `Bearer ${token}` },

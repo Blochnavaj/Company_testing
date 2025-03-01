@@ -47,12 +47,12 @@ const ShopContextProvider = (props) => {
 
     const getProductData = async () => {
         try {
-            console.log("Fetching product data...");
+             
             const response = await axios.get(`${backendUrl}/api/v1/list`);
-            console.log("API Response:", response.data);
+             
 
             if (response.data.success) {
-                console.log("Products before setting state:", response.data.products);
+                 
                 setProducts(response.data.products);
             } else {
                 toast.error(response.data.message);
