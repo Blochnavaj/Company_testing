@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 
 function List() {
   const [list, setList] = useState([]);
-    // const token = localStorage.getItem("token");  Ensure token is stored
+    const token = localStorage.getItem("token");   
   
     //  Fetch Product List
     const fetchList = async () => {
