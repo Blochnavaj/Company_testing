@@ -73,14 +73,14 @@ useEffect(() => {
       {/* Mobile Filter Button */}
       <button
         onClick={() => setShowFilter(true)}
-        className="md:hidden px-4 py-2 bg-gray-800 text-white rounded-md fixed top-28 left-4 z-50"
+        className="md:hidden px-4 py-2 bg-gray-800 text-white rounded-md  absolute top-28 left-4  "
       >
         Filters
       </button>
 
       {/* Sidebar Filters */}
       <div
-        className={`fixed inset-y-0 left-0 w-64 h-[35rem] bg-white mt-4 p-4 shadow-lg z-50 md:z-0 transform transition-transform duration-300 ${showFilter ? 'translate-x-0' : '-translate-x-full'} md:static md:translate-x-0`}
+        className={`fixed mt-28 inset-y-0 left-0 w-64 h-[35rem] bg-white   p-4 shadow-lg z-50 md:z-0 transform transition-transform duration-300 ${showFilter ? 'translate-x-0' : '-translate-x-full'} md:static md:translate-x-0`}
       >
         {/* Close Button for Mobile */}
         <div className="flex justify-between items-center mb-4 md:hidden">
@@ -133,23 +133,7 @@ useEffect(() => {
 </FormControl>
 
 
-<FormControl className='w-full mb-4'>
-  <InputLabel>Brand</InputLabel>
-  <Select
-    multiple
-    value={selectedBrands}
-    onChange={(e) => setSelectedBrands(e.target.value)}
-    input={<OutlinedInput label='Brand' />}
-    renderValue={(selected) => selected.join(', ')}
-  >
-    {brands.map((brand) => (
-      <MenuItem key={brand} value={brand}>
-        <Checkbox checked={selectedBrands.includes(brand)} />
-        <ListItemText primary={brand} />
-      </MenuItem>
-    ))}
-  </Select>
-</FormControl>
+ 
 
       </div>
 
